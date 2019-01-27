@@ -12,6 +12,7 @@ h1{
 .cardSlot{
   text-align: center;
   display: inline-block;
+  cursor: pointer;
 }
 p{
   color: white;
