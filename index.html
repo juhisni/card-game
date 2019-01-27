@@ -8,23 +8,26 @@
   <body>
     <div class="container">
       <h1>Card Game</h1>
+      <h2>Try to guess the right card suit!</h2>
       <div class="buttons">
         <button type="button" name="button" class="btn1 active" onclick="startNewGame()">New Game</button>
         <button type="button" name="button" class="btn2" onclick="shuffleArray(cards)">Shuffle Cards</button>
       </div>
       <!--This section is used for displaying the given card-->
-      <div class="cardSlot" onclick="pickCard()">
-        <p>Card</p>
+      <div class="cardSlot">
         <!--Card images from https://github.com/hayeah/playing-cards-assets-->
         <img src="images/back.png" alt="card-picture">
       </div>
       <br/>
       <!--Card suit images from https://pixabay.com/fi/pelikortit-kortit-suit-pata-hertta-2091948/ -->
       <div class="cardSuits">
-        <img src="images/clubs_mini.png" alt="suit-clubs">
-        <img src="images/diamonds_mini.png" alt="suit-diamonds">
-        <img src="images/hearts_mini.png" alt="suit-hearts">
-        <img src="images/spades_mini.png" alt="suit-spades">
+        <img src="images/clubs_mini.png" alt="suit-clubs" onclick="guessNextCardSuit(clubs)">
+        <img src="images/diamonds_mini.png" alt="suit-diamonds" onclick="guessNextCardSuit(diamonds)">
+        <img src="images/hearts_mini.png" alt="suit-hearts" onclick="guessNextCardSuit(hearts)">
+        <img src="images/spades_mini.png" alt="suit-spades" onclick="guessNextCardSuit(spades)">
+      </div>
+      <div class="score">
+
       </div>
     </div>
     <script src="index.js" charset="utf-8"></script>

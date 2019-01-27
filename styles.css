@@ -31,17 +31,14 @@ h1{
   cursor: pointer;
   pointer-events: none;
 }
-.active{
-  display: inline-block;
-  pointer-events: auto;
-}
-p{
-  color: white;
-}
 .cardSlot img {
   width: 80%;
   background-color: white;
   border-radius: 20px;
+}
+.active{
+  display: inline-block;
+  pointer-events: auto;
 }
 footer{
   color: white;

@@ -1,5 +1,12 @@
 var cards;
 var remainingCards;
+//All cards from each card suit for checking the guessed suit
+var clubs = ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "c11", "c12", "c13"];
+var diamonds = ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d10", "d11", "d12", "d13"];
+var hearts = ["h1", "h2", "h3", "h4", "h5", "h6", "h7", "h8", "h9", "h10", "h11", "h12", "h13"];
+var spades = ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13"];
+var picked_card;
+var score = 0;
 //JavaScript implementation of the Fisher-Yates shuffle
 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(cards) {
@@ -12,8 +19,8 @@ function shuffleArray(cards) {
     console.log(cards);
 }
 //Picking the last item of the shuffled array and then removing it from the array
+
 function pickCard(){
-  var picked_card;
   var picked_card_image_location;
   if (remainingCards > 0){
     picked_card = cards[remainingCards - 1];
@@ -33,6 +40,17 @@ function pickCard(){
     document.querySelector(".btn1").classList.add("active");
   }
 }
+//Checks if the guessed suit was right
+function guessNextCardSuit(suit){
+  pickCard();
+  //Adds one point to the score and updates the score field.
+  if (suit.includes(picked_card)){
+    score++;
+    document.querySelector(".score").innerHTML = "<h1>Score: " + score + "</h1>";
+  }
+}
+
+
 function startNewGame(){
   //Sets the basic card back showing when starting a new game
   document.querySelector(".cardSlot img").setAttribute("src", "images/back.png");
@@ -48,4 +66,6 @@ function startNewGame(){
   cards = ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "c11", "c12", "c13", "d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d10", "d11", "d12", "d13", "h1", "h2", "h3", "h4", "h5", "h6", "h7", "h8", "h9", "h10", "h11", "h12", "h13", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13"];
   //Shuffles the reseted cards
   shuffleArray(cards);
+  //Shows score at the beginning
+  document.querySelector(".score").innerHTML = "<h1>Score: " + score + "</h1>";
 }
