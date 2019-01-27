@@ -10,12 +10,20 @@ h1{
   color: white;
 }
 .btn1{
-  display:none;
+  display: none;
   pointer-events: none;
 }
 .btn2{
   display:none;
   pointer-events: none;
+}
+.cardSuits{
+  display: none;
+  cursor: pointer;
+  pointer-events: none;
+}
+.cardSuits img{
+  width:8%;
 }
 .cardSlot{
   text-align: center;
@@ -24,13 +32,13 @@ h1{
   pointer-events: none;
 }
 .active{
-  display:inline-block;
+  display: inline-block;
   pointer-events: auto;
 }
 p{
   color: white;
 }
-img {
+.cardSlot img {
   width: 80%;
   background-color: white;
   border-radius: 20px;

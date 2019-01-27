@@ -40,6 +40,8 @@ function startNewGame(){
   document.querySelector(".cardSlot").classList.add("active");
   //Enables Shuffle Cards button
   document.querySelector(".btn2").classList.add("active");
+  //Enables clicking suit buttons
+  document.querySelector(".cardSuits").classList.add("active");
   //Disables New Game button
   document.querySelector(".btn1").classList.remove("active");
   //Resets the cards array back to 52 cards
