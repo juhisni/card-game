@@ -13,12 +13,20 @@ function shuffleArray(cards) {
 }
 //Picking the last item of the shuffled array and then removing it from the array
 function pickCard(){
-  var picked_card = cards[remainingCards - 1];
-  cards.pop();
-  remainingCards--;
-  //Stores the location of the picked card's image and then sets that image as the one showing.
-  var picked_card_image_location = "images/" + picked_card + ".png";
-  document.querySelector(".cardSlot img").setAttribute("src", picked_card_image_location);
+  var picked_card;
+  var picked_card_image_location;
+  if (remainingCards > 0){
+    picked_card = cards[remainingCards - 1];
+    cards.pop();
+    remainingCards--;
+    //Stores the location of the picked card's image and then sets that image as the one showing.
+    picked_card_image_location = "images/" + picked_card + ".png";
+    document.querySelector(".cardSlot img").setAttribute("src", picked_card_image_location);
+  }
+  else{
+    alert("No cards left! Please start a New Game!");
+  }
+
   //Disables Shuffle Cards button and enables New Game button after the first picked card
   if (remainingCards === 51){
     document.querySelector(".btn2").classList.remove("active");
