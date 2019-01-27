@@ -24,12 +24,11 @@ h1{
 }
 .cardSuits img{
   width:8%;
+  border-radius: 20px;
 }
 .cardSlot{
   text-align: center;
   display: none;
-  cursor: pointer;
-  pointer-events: none;
 }
 .cardSlot img {
   width: 80%;

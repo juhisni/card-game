@@ -50,7 +50,6 @@ function guessNextCardSuit(suit){
   }
 }
 
-
 function startNewGame(){
   //Sets the basic card back showing when starting a new game
   document.querySelector(".cardSlot img").setAttribute("src", "images/back.png");
