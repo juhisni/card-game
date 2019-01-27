@@ -13,6 +13,10 @@ h1{
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  pointer-events: none;
+}
+.active{
+  pointer-events: auto;
 }
 p{
   color: white;
