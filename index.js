@@ -7,15 +7,11 @@ function shuffleArray(cards) {
         const j = Math.floor(Math.random() * (i + 1));
         [cards[i], cards[j]] = [cards[j], cards[i]];
     }
-    //console.log(cards);
     //Number of cards at the beginning = 52.
     remainingCards = cards.length;
-    //console.log(remainingCards);
 }
 //Picking the last item of the shuffled array and then removing it from the array
 function pickCard(){
   var picked_card = cards[remainingCards - 1];
   cards.pop();
-  //console.log(picked_card);
-  //console.log(cards);
 }
