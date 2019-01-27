@@ -14,4 +14,8 @@ function shuffleArray(cards) {
 function pickCard(){
   var picked_card = cards[remainingCards - 1];
   cards.pop();
+  remainingCards--;
+  //Stores the location of the picked card's image and then sets that image as the one showing.
+  var picked_card_image_location = "images/" + picked_card + ".png";
+  document.querySelector(".cardSlot img").setAttribute("src", picked_card_image_location);
 }
