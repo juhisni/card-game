@@ -1,9 +1,25 @@
 body {
   background-color: #393E46;
 }
+.container{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
 h1{
   color: white;
 }
+.cardSlot{
+  text-align: center;
+  display: inline-block;
+}
+p{
+  color: white;
+}
+img {
+  width: 80%;
+}
 footer{
   color: white;
+  text-align: center;
 }
