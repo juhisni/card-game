@@ -9,13 +9,22 @@ body {
 h1{
   color: white;
 }
+.btn1{
+  display:none;
+  pointer-events: none;
+}
+.btn2{
+  display:none;
+  pointer-events: none;
+}
 .cardSlot{
   text-align: center;
-  display: inline-block;
+  display: none;
   cursor: pointer;
   pointer-events: none;
 }
 .active{
+  display:inline-block;
   pointer-events: auto;
 }
 p{
