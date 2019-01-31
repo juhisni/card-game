@@ -33,7 +33,7 @@ function pickCard(){
   else{
     document.querySelector(".cardSlot img").setAttribute("src", "images/no-cards-left.png");
     document.querySelector("h2.hintText").innerHTML = "No cards left, start a New Game!";
-    document.querySelector("h2.hintText").style.color = "red";
+    document.querySelector("h2.hintText").classList.add("no-cards-left");
     //Disables and hides clickable card suits
     document.querySelector(".cardSuits").classList.remove("active");
   }
@@ -57,6 +57,9 @@ function guessNextCardSuit(suit){
 function startNewGame(){
   //Sets the basic card back showing when starting a new game
   document.querySelector(".cardSlot img").setAttribute("src", "images/back.png");
+  //Show basic hint text
+  document.querySelector("h2.hintText").innerHTML = "Try to guess the right card suit of each card!";
+  document.querySelector("h2.hintText").classList.remove("no-cards-left");
   //Enables clicking the card
   document.querySelector(".cardSlot").classList.add("active");
   //Enables Shuffle Cards button

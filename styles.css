@@ -58,6 +58,9 @@ button{
   display: inline-block;
   pointer-events: auto;
 }
+.no-cards-left{
+  color: red;
+}
 footer{
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
