@@ -16,7 +16,6 @@ function shuffleArray(cards) {
     }
     //Number of cards at the beginning = 52.
     remainingCards = cards.length;
-    console.log(cards);
 }
 //Picking the last item of the shuffled array and then removing it from the array
 
@@ -68,3 +67,22 @@ function startNewGame(){
   //Shows score at the beginning
   document.querySelector(".score").innerHTML = "<h1>Score: " + score + "</h1>";
 }
+
+//Shows New Game tooltip when hovering over the button
+document.querySelector(".btn1").addEventListener("mouseover", function(){
+  document.querySelector(".shuffleTooltipText").innerHTML = "Start a new game with a shuffled deck!";
+  document.querySelector(".shuffleTooltipText").style.visibility = "visible";
+});
+//Shows Shuffle Cards tooltip when hovering over the button
+document.querySelector(".btn2").addEventListener("mouseover", function(){
+  document.querySelector(".shuffleTooltipText").innerHTML = "Shuffles the cards even though you cannot see it!";
+  document.querySelector(".shuffleTooltipText").style.visibility = "visible";
+});
+//Hides the tooltip on btn1 mouseout
+document.querySelector(".btn1").addEventListener("mouseout", function(){
+  document.querySelector(".shuffleTooltipText").style.visibility = "hidden";
+});
+//Hides the tooltip on btn2 mouseout
+document.querySelector(".btn2").addEventListener("mouseout", function(){
+  document.querySelector(".shuffleTooltipText").style.visibility = "hidden";
+});

@@ -30,6 +30,12 @@ button{
   display:none;
   pointer-events: none;
 }
+.shuffleTooltipText{
+  visibility:hidden;
+  color:white;
+  font-family: 'Lobster', cursive;
+  font-size: 1.5rem;
+}
 .cardSuits{
   display: none;
   cursor: pointer;
