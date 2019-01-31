@@ -29,10 +29,12 @@ function pickCard(){
     picked_card_image_location = "images/" + picked_card + ".png";
     document.querySelector(".cardSlot img").setAttribute("src", picked_card_image_location);
   }
+  //Condition for when running out of cards
   else{
     document.querySelector(".cardSlot img").setAttribute("src", "images/no-cards-left.png");
     document.querySelector("h2.hintText").innerHTML = "No cards left, start a New Game!";
     document.querySelector("h2.hintText").style.color = "red";
+    //Disables and hides clickable card suits
     document.querySelector(".cardSuits").classList.remove("active");
   }
 
