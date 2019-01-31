@@ -30,7 +30,10 @@ function pickCard(){
     document.querySelector(".cardSlot img").setAttribute("src", picked_card_image_location);
   }
   else{
-    alert("No cards left! Please start a New Game!");
+    document.querySelector(".cardSlot img").setAttribute("src", "images/no-cards-left.png");
+    document.querySelector("h2.hintText").innerHTML = "No cards left, start a New Game!";
+    document.querySelector("h2.hintText").style.color = "red";
+    document.querySelector(".cardSuits").classList.remove("active");
   }
 
   //Disables Shuffle Cards button and enables New Game button after the first picked card
