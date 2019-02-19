@@ -1,3 +1,4 @@
+//jshint esversion:6
 var cards;
 var remainingCards;
 //All cards from each card suit for checking the guessed suit
@@ -7,6 +8,22 @@ var hearts = ["h1", "h2", "h3", "h4", "h5", "h6", "h7", "h8", "h9", "h10", "h11"
 var spades = ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13"];
 var picked_card;
 var score = 0;
+//Adds click eventlistener to all cardback images and flashes the clicked card
+var number_of_cards = document.querySelectorAll(".image").length;
+
+for (var i = 0; i < number_of_cards; i++) {
+  document.querySelectorAll(".image")[i].addEventListener("click", function (){
+
+    flashClickedCard(this);
+  });
+}
+//Function to flash the clicked card
+function flashClickedCard(card){
+  card.classList.add("pressed");
+  setTimeout(function(){
+    card.classList.remove("pressed");
+  }, 150);
+}
 //JavaScript implementation of the Fisher-Yates shuffle
 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(cards) {

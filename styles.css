@@ -61,6 +61,10 @@ button{
 .no-cards-left{
   color: red;
 }
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
 footer{
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
